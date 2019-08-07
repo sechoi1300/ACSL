@@ -27,6 +27,12 @@ public class C1JR_AGRAM {
 				String dealerCard4Suit = in.next();
 				int dealerCard5Num = in.nextInt();
 				String dealerCard5Suit = in.next();
+				
+				if(opponentCardSuit.equals("H")) {
+					
+				} else if(opponentCardSuit.equals("D")) {
+					
+				} else if(opponentCard)
 			}
 		} catch(Exception e) {
 			e.printStackTrace();
