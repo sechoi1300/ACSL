@@ -10,26 +10,27 @@ public class C2JR_DigitalDeletions {
 			
 			for(int gLoop = 0; gLoop < 7; gLoop++) {
 				String[] num = in.nextLine().split(" ");
+				
 				ArrayList<Integer> list = new ArrayList<Integer>();
 				int moves = 0;
+				
 				
 				for(int i = 0; i < num.length; i++) {
 					list.add(Integer.parseInt(num[i]));
 				}
 				
 				while(list.size() > 0) {
-					for(int i = list.size(); i > 0; i--) {
-						if((Integer)list.get(i) == 0) {
+					for(int i = list.size() - 1; i > 0; i--) {
+						if(list.get(i) == 0) {
 							for(int l = 0; l < i; l++) {
 								list.remove(l);
 							}
 							moves++;
-						} else {
-							continue;
 						}
 					}
+					
 					int max = 0;
-					for(int i = list.size(); i > 0; i--) {
+					for(int i = list.size() - 1; i > 0; i--) {
 						max = Math.max(max, list.get(i));
 					}
 					if(max % 2 == 0) {
@@ -42,6 +43,7 @@ public class C2JR_DigitalDeletions {
 				}
 				
 				System.out.println(moves);
+				
 			}
 			
 		} catch(Exception e) {
