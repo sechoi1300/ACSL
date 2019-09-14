@@ -1,13 +1,15 @@
 import java.util.*;
 import java.io.*;
 
-public class Mixing_Milk {
+public class mixmilk {
 	
 	static Scanner in;
+	static PrintWriter out;
 	
 	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
-		in = new Scanner(new File("mixing_milk"));
+		in = new Scanner(new File("mixmilk.in"));
+		out = new PrintWriter(new File("mixmilk.out"));
 		
 		int c1 = in.nextInt();
 		int m1 = in.nextInt();
@@ -51,9 +53,10 @@ public class Mixing_Milk {
 			m1 = 0;
 		}
 		
-		System.out.println(m1);
-		System.out.println(m2);
-		System.out.println(m3);
+		out.println(m1);
+		out.println(m2);
+		out.println(m3);
+		out.close();
 		
 	}
 	
