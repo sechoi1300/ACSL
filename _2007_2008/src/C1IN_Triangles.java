@@ -2,52 +2,49 @@ import java.util.*;
 import java.io.*;
 
 public class C1IN_Triangles {
-
-	public static void main(String[] args) {
+	
+	static Scanner in;
+	static String t1[];
+	static HashMap<String, Character> t2;
+	
+	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
-		try {
-			Scanner in = new Scanner(new File("0708c1in.in"));
-			
-			for(int gLoop = 0; gLoop < 10; gLoop++) {
+		in = new Scanner(new File("0708c1in.in"));
+		
+		for(int gLoop = 0; gLoop < 10; gLoop++) {
 				
-				double[] first = new double[3];
-				double[] second = new double[3];
-				String[] output = new String[3];
-				
-				for(int i = 0; i < 3; i++) {
-					first[i] = in.nextDouble();
-				}
-				
-				for(int i = 0; i < 3; i++) {
-					second[i] = in.nextDouble();
-				}
-				
-				if(first[0] == second[0] && first[1] == second[1] && first[2] == second[2]) {
-					System.out.println("DEF");
-				}
-				else if(first[0] == second[2] && first[1] == second[1] && first[2] == second[0]) {
-					System.out.println("DFE");
-				}
-				else if(first[0] == second[1] && first[1] == second[0] && first[2] == second[2]) {
-					System.out.println("FED");
-				}
-				else if(first[0] == second[2] && first[1] == second[0] && first[2] == second[1]) {
-					System.out.println("FDE");
-				}
-				else if(first[0] == second[0] && first[1] == second[2] && first[2] == second[1]) {
-					System.out.println("EDF");
-				}
-				else if(first[0] == second[1] && first[1] == second[2] && first[2] == second[0]) {
-					System.out.println("EFD");
-				}
-				else {
-					System.out.println("NONE");
-				}
-								
+			try {
+				init();
+				solve();
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
-		} catch(Exception e) {
-			e.printStackTrace();
+			
 		}
 	}
-
+	
+	static void init() {
+		String[] t = in.nextLine().split(" ");
+		t1 = new String[] {t[1], t[2], t[0]};
+		t2 = new HashMap<String, Character>();
+		
+		t2.put(t[3], 'F');
+		t2.put(t[4], 'D');
+		t2.put(t[5], 'E');
+	}
+	
+	static void solve() {
+		String output = "";
+		
+		for(int i = 0; i < 3; i++) {
+			if(t2.get(t1[i]) == null) {
+				output = "NONE";
+				break;
+			} else {
+				output += t2.get(t1[i]);
+			}
+		}
+		System.out.println(output);
+	}
+	
 }
