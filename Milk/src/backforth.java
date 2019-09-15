@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Back_and_Forth {
+public class backforth {
 	
 	static Scanner in;
 	static String[] a;
@@ -9,10 +9,12 @@ public class Back_and_Forth {
 	static String[] a1;
 	static String[] b1;
 	static Set<Integer> set;
+	static PrintWriter out;
 	
 	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
 		in = new Scanner(new File("back_and_forth"));
+		out = new PrintWriter(new File("backforth.out"));
 		
 		String[] a = new String[10];
 		String[] b = new String[10];
@@ -47,6 +49,7 @@ public class Back_and_Forth {
 				
 			}
 		}
-		System.out.println(set.size());
+		out.println(set.size());
+		out.close();
 	}
 }
