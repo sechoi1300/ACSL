@@ -13,7 +13,7 @@ public class backforth {
 	
 	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
-		in = new Scanner(new File("back_and_forth"));
+		in = new Scanner(new File("backforth.in"));
 		out = new PrintWriter(new File("backforth.out"));
 		
 		String[] a = new String[10];
