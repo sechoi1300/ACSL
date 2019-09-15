@@ -2,13 +2,15 @@ import java.util.*;
 import java.io.*;
 import java.lang.reflect.Array;
 
-public class Bucket_List {
+public class blist {
 	
 	static Scanner in;
+	static PrintWriter out;
 	
 	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
-		in = new Scanner(new File("bucket_list"));
+		in = new Scanner(new File("blist.in"));
+		out = new PrintWriter(new File("blist.out"));
 		
 		int N = in.nextInt();
 		int[] a = new int[1001];
@@ -23,7 +25,8 @@ public class Bucket_List {
 			}
 		}
 		Arrays.sort(a);
-		System.out.println(a[1000]);
+		out.println(a[1000]);
+		out.close();
 	}
 
 }
