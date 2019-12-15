@@ -1,3 +1,9 @@
+/*
+Name: Sejin Eric Choi		Grade: 10
+Division: intermediate5
+Team: stempia
+Date: 12/8/2019
+*/
 import java.util.*;
 import java.io.*;
 
@@ -57,7 +63,6 @@ public class C1IN_NumberTransformation {
 			System.out.print(Nnum[i]);
 		}
 		System.out.println();
-		//System.out.println(Arrays.toString(Nnum));
 	}
 	
 }
