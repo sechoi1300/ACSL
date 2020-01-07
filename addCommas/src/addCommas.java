@@ -31,27 +31,27 @@ public class addCommas {
 	}
 	
 	static void solve() {
-		if(num.length() % 3 == 1) {
-			String front = num.substring(0, 1);
-			System.out.print(front);
-			for(int i = 1; i < num.length(); i+=3) {
-				System.out.print("," + num.substring(i, i + 3));
+			if(num.length() % 3 == 1) {
+				String front = num.substring(0, 1);
+				System.out.print(front);
+				for(int i = 1; i < num.length(); i+=3) {
+					System.out.print("," + num.substring(i, i + 3));
+				}
 			}
-		}
-		else if(num.length() % 3 == 2) {
-			String front = num.substring(0, 2);
-			System.out.print(front);
-			for(int i = 2; i < num.length(); i+=3) {
-				System.out.print("," + num.substring(i, i + 3));
+			else if(num.length() % 3 == 2) {
+				String front = num.substring(0, 2);
+				System.out.print(front);
+				for(int i = 2; i < num.length(); i+=3) {
+					System.out.print("," + num.substring(i, i + 3));
+				}
 			}
-		}
-		else {
-			String front = num.substring(0, 3);
-			System.out.print(front);
-			for(int i = 3; i < num.length(); i+=3) {
-				System.out.print("," + num.substring(i, i + 3));
+			else {
+				String front = num.substring(0, 3);
+				System.out.print(front);
+				for(int i = 3; i < num.length(); i+=3) {
+					System.out.print("," + num.substring(i, i + 3));
+				}
 			}
-		}
 	}
 	
 }
