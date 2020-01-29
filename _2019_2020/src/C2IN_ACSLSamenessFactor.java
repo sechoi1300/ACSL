@@ -1,3 +1,10 @@
+/*
+Sejin Eric Choi
+Grade 10
+STEMPIA
+Intermediate
+Contest 2
+*/
 import java.util.*;
 import java.io.*;
 
@@ -11,10 +18,10 @@ public class C2IN_ACSLSamenessFactor {
 	
 	public static void main(String[]args) throws IOException {
 		
-		//in = new Scanner(new File("1920c2in.in"));
-		in = new Scanner(new File("bleh"));
+		in = new Scanner(new File("1920c2in.in"));
+		//in = new Scanner(new File("bleh"));
 		
-		//for(int i = 0; i < 5; i++) {
+		for(int i = 0; i < 5; i++) {
 			
 			try {
 				init();
@@ -25,7 +32,7 @@ public class C2IN_ACSLSamenessFactor {
 				System.out.println("Error");
 				//e.printStackTrace();
 			}
-		//}
+		}
 		
 		in.close();
 	}
