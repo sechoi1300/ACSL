@@ -1,0 +1,12 @@
+#, a, aa, aaa, ab, abb, aabb, aaab, abbb, b
+a?b
+a*b
+a+b
+a*b+
+a?b+
+#, x, y, z, xy, xyz, xxyz, xyyz, yzz, xxxyzz
+xy?
+y+z
+x?y*z
+x?x?
+x+yz?
