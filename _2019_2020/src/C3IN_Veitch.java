@@ -1,5 +1,5 @@
 /*
-Sejin Eric CHoi
+Sejin Eric Choi
 Grade 10
 STEMPIA
 Intermediate
